@@ -1,6 +1,6 @@
 # Sample Neovim Setup
 
-## Installation.
+## Mac Installation.
 - Two types of releases, stable and nightly.
 - Stable Macos install  
 $ `mkdir ~/neovim`  
@@ -21,7 +21,23 @@ $ `cd $HOME/neovim-nightly`
 $ `make CMAKE_BUILD_TYPE=Release`
 
 - add directory to path using following command and full path to app location eg /Users/yourname/neovim/build/bin  
-$ `sudo nano /private/etc/paths`
+$ `sudo nano /private/etc/paths`  
+
+## WSL2 Linux Installation.  
+- Cloning the github repo will build the nightly version.  
+- To build the stable version use the following steps and checkout the release version branch e.g. git checkout release-0.5  
+$ `sudo apt-get install ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip curl`  
+$ `cd ~/`  
+$ `git clone https://github.com/neovim/neovim.git`  
+$ `cd neovim/`  
+$ `git branch -r`  
+$ `git checkout release-0.5`  
+$ `make CMAKE_BUILD_TYPE=Release`  
+$ `sudo make install`  
+$ `sudo apt install python3-neovim`  
+
+- The simpler installation procedure would be the following step:  
+$ `sudo apt install neovim`  
 
 ## Config
 - Add your config at $HOME/.config/nvim/init.vim  
