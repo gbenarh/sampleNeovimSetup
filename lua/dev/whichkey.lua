@@ -137,34 +137,34 @@ local mappings = {
 
   l = {
     name = "LSP",
-    a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
-    d = {
-      "<cmd>Telescope lsp_document_diagnostics<cr>",
-      "Document Diagnostics",
-    },
-    w = {
-      "<cmd>Telescope lsp_workspace_diagnostics<cr>",
-      "Workspace Diagnostics",
-    },
+    a = { "<cmd>Lspsaga code_action<cr>", "Code Action" },
+    d = { "<cmd>lua vim.lsp.buf.definition()<cr>", "Go To Definition" },
+    D = { "<cmd>lua vim.lsp.buf.declaration()<cr>", "Go To Declaration" },
+    e = { "<cmd>Lspsaga show_line_diagnostics<cr>", "Show Line Diagnostics"},
     f = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format" },
+    F = { "<cmd>LspToggleAutoFormat<cr>", "Toggle Autoformat" },
+    h = { "<cmd>lua vim.lsp.buf.signature_help()<cr>", "Signature Help" },
+    H = { "<cmd>Lspsaga hover_doc<cr>", "Hover Commands" },
     i = { "<cmd>LspInfo<cr>", "Info" },
     I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
-    j = {
-      "<cmd>lua vim.lsp.diagnostic.goto_next()<cr>",
-      "Next Diagnostic",
+    j = { "<cmd>Lspsaga diagnostic_jump_next<cr>", "Go To Next Diagnostic" },
+    k = { "<cmd>Lspsaga diagnostic_jump_prev<cr>", "Go To Previous Diagnostic" },
+    l = {
+      "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<cr>",
+      "List Workspace Folders"
     },
-    k = {
-      "<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>",
-      "Prev Diagnostic",
-    },
-    l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
+    L = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
     q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Quickfix" },
-    r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
+    r = { "<cmd>lua vim.lsp.buf.references()<cr>", "References"},
+    R = { "<cmd>Lspsaga rename<cr>", "Rename"},
     s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
     S = {
       "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
       "Workspace Symbols",
     },
+    t = { "<cmd>lua vim.lsp.buf.type_definition()<cr>", "Type Definition"},
+    w = { "<cmd>lua vim.lsp.buf.add_workspace_folder()<cr>", "Add Workspace Folder" },
+    W = { "<cmd>lua vim.lsp.buf.remove_workspace_folder()<cr>", "Remove Workspace Folder" },
   },
   t = {
     name = "Telescope",

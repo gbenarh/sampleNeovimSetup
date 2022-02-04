@@ -34,7 +34,13 @@ local function footer()
 	-- local fortune = handle:read("*a")
 	-- handle:close()
 	-- return fortune
-	return "Keep learning, growing your knowledge and enjoy the process!"
+  -- return "Anyone who stops learning is old. whether at twenty or eighty. ~Henry Ford"
+  -- return "For the things we have to learn before we can do them, we learn by doing them. ~Aristotle"
+  -- return "Anything worth doing well is worth doing poorly at first. ~Ray Congdon"
+  -- return "Smooth seas do not make skillful sailors. ~African Proverb"
+  -- return "The doer alone learneth ~Friedrich Nietzsche"
+  -- return "I am still learning ~Michelangelo"
+	return "Learning is not attained by chance, it must be sought for with ardor and attended to with diligence. ~Abigail Adams"
 end
 
 dashboard.section.footer.val = footer()
